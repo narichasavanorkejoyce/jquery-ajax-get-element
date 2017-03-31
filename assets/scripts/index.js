@@ -16,7 +16,9 @@ $(() => {
 const bookEvents = require('./books/events')
 
 // On document ready
+// $('.books') is a jQuery selector
+// When the submit button is clicked, bookEvents.onGetBooks will fire
 $(() => {
-  $('.books').on('submit', bookEvents.onGetBooks)
+  $('#books-search').on('submit', bookEvents.onGetBooks)
+  $('#book-search').on('submit', bookEvents.onGetBook)
 })
-
